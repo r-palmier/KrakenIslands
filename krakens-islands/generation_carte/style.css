@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+:root{
+    --color-text: rgba(231, 81, 81, 0.877);
+    --color-text2: rgba(7, 86, 204, 0.96);
+    --shadow-text: 2px 1px 2px rgba(0, 0, 0, 0.8);
+    --shadow-box: 0.17rem 0.2rem 0.6rem rgba(0, 0, 0, 0.938);
+}
+
+body {
+    background: url(./bois_bg.jpg) center/cover;
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+* {
+    /* border: 1px solid whitesmoke  */
+}
+
+header {
+    margin: 20px;
+    padding: 0px;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--color-text);
+    text-align: center;
+    font-family: 'Courgette', serif;
+    font-size: 5.2em;
+    text-shadow: var(--shadow-text);
+}
+
+h2 {
+    color: var(--color-text);
+    text-align: center;
+    font-family: 'Courgette', serif;
+    font-size: 3.5em;
+    text-shadow: var(--shadow-text);
+}
+
+.b_retour {
+    position: absolute;
+    bottom: 2em;
+    right: 2.3em;
+
+    height: 60px;
+    width: 110px;
+    background: url(./boisbutton_1280.jpg) ;
+
+    color: var(--color-text);
+    font-family: 'Courgette', serif;
+    font-size: 1.5em;
+    text-shadow: var(--shadow-text);
+
+    border-radius: 1.7em;
+    box-shadow: var(--shadow-box);
+    border: 0px;
+}
+
+.b_accueil {
+    text-align: center;
+    margin: 50px;
+       
+}
+
+.b_accueil_int {
+    height: 100px;
+    width: 300px;
+    margin-bottom: 40px;
+    background: url(./boisbutton_1280.jpg) ;
+
+    color: var(--color-text);
+    font-family: 'Courgette', serif;
+    font-size: 1.5em;
+    text-shadow: var(--shadow-text);
+
+    border-radius: 1.7em;
+    box-shadow: var(--shadow-box);
+    border: 0;
+    
+}
+
+
+button:hover, input[type="submit"]:hover {
+    /* background: url(./boisbutton_1280_s.jpg);    */
+}
+
+.b_retour:active, .b_accueil_int:active {
+    box-shadow: 0.1rem 0.1rem 4px rgba(0, 0, 0, 0.938);
+}
+
+.connexion_bg {
+    background: url(./parchment.png) no-repeat center/cover;
+    height: 500px;
+    width: 600px;
+    margin-left: 17%;
+   
+}
+
+.connexion_content {
+    margin: 90px;
+    margin-top: 80px;
+
+    color: var(--color-text);
+    font-family: 'Courgette', serif;
+    font-size: 1.5em;
+    text-shadow: 0.03rem 0.03rem 0.05rem rgba(0, 0, 0, 0.5);
+}
+
+.menu_bg {
+	background: url() no-repeat center/cover;
+    height: 500px;
+    width: 600px;
+    margin-left: 17%;
+}
+
+.b_creer {
+}
+	
+
+.z-text {
+    background: none;
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.384);
+
+    color: var(--color-text2);
+    font-family: 'Courgette', serif;
+    font-size: 1.4em;
+    
+}
+
+.z-text:focus {
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid rgba(209, 174, 16, 0.671);
+}
+
+.b_connexion {
+    background: none;
+    border: none;
+
+    font-family: 'Courgette', serif;
+    font-size: 0.8em;
+
+    border-radius: 30%;
+    padding: 5px;
+}
+
+.b_connexion:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.b_connexion:active {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+
+.cadre_bateau {
+	height: 50vh;
+}
+
+.shooner {
+	display: flex;
+	background: url(./shooner.jpg) center/cover;
+	width: 200px;
+	height: 50vh;
+}
+
+.planche_container {
+    display: flex;
+    align-items: baseline;
+}
+
+.planche {
+    background: url(./planche.jpg) no-repeat center/cover;
+    padding: 30px;
+    height: 1.1em;
+    width: 10em;
+    text-align: center;
+    color: rgb(220 186 159);
+    font-family: 'Courgette', serif;
+    font-size: 2em;
+    text-shadow:-0.7px -1px 0 rgba(39 15 22 ), 1px 2px 0 rgba(219, 162, 118, 0.486); 
+    border-radius: 5%;
+    box-shadow: var(--shadow-box);
+}
+
+#planche1 {
+    position: absolute;
+    top: 75%;
+    left: 10%;
+}
+
+#planche2 {
+    position: absolute;
+    bottom: 65%;
+    right: 13%;
+}
+
+#planche_menu {
+	margin-bottom: 2em;
+}
+
+.cadre_menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.bateaux {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.center_bateau {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radio_bateau {
+    margin: 3px;
+}
+
+.cadre_bateau {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.315);
+    padding: 5px;
+}
+
+.nom_bateau {
+    color: white;
+    font-family: 'Courgette', serif;
+    font-size: 1.8em;
+    text-shadow: var(--shadow-text);
+}
+
+.schooner {
+    display: flex;
+    background: url(./ACRO_Schooner.png) center/cover;
+    width: 19em;
+    height: 18em;
+}
+
+.brick {
+    display: flex;
+    background: url(./ACRO_Brick.png) center/cover;
+    width: 19em;
+    height: 18em;
+}
+
+.fregate {
+    display: flex;
+    background: url(./ACRO_Fregate.png) center/cover;
+    width: 19em;
+    height: 18em;
+}
+
+.galion {
+    display: flex;
+    background: url(./ACRO_Man_o_war.png) center/cover;
+    width: 19em;
+    height: 18em;
+}
+
+.stats {
+    padding: 20px;
+    color: whitesmoke;
+    font-family: 'Courgette', serif;
+    font-size: 1.2em;
+    text-shadow: var(--shadow-text);
+}
+
+.form_choix {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadre_pret {
+	text-align: center;
+}
+
+.bonus_container { 
+    border: 1px solid rgb(245, 248, 245);
+    
+}
+  
+/*>>>>>>> 2e8c5a2ddc7d892b5bb0fada9d526c25388a6e14*/
+
+.deplacement_container {
+    border: 1px solid rgb(15, 15, 15);
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ligne_1 {
+
+}
+
+.ligne_2 {
+
+}
+
+.ligne_3 {
+
+}
+
+.shoot_container {
+    border: 1px solid rgb(2, 50, 95);    
+} 
+    
+.droite {
+    display: flex;
+    flex-direction : column;
+    justify-content: space-between;
+    align-items: center;
+    width:20%;
+    border: 1px solid rgb(0, 17, 255);
+}
+
+
+.centre {
+    display: flex;
+    flex-direction : column;
+    justify-content: space-between;
+    align-items: center;
+    width:60%;
+    border: 1px solid rgb(9, 255, 0);
+	overflow-y: scroll;
+
+}
+
+
+.gauche {
+    display: flex;
+    flex-direction : column;
+    justify-content: space-between;
+    align-items: center;
+    width:20%;
+    border: 1px solid red;
+}
+
+.tour {
+    
+}
+
+
+.pv {
+    height: 20%;
+    
+}
+
+.ptsvie {
+    background-color: rgb(255, 255, 255);
+
+}
+
+.bl {
+	background-color: blue; 
+	border: 1px dotted #000000e0;
+}
+
+.ye {
+	background-color: yellow; 
+	border: 1px dotted #000000e0;
+}
+
+.gr {
+	background-color: green; 
+	border: 1px dotted #000000e0;
+}
+
+.br {
+	background-color: brown; 
+	border: 1px dotted #000000e0;
+
+}

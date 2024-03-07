@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jeu</title>
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+	<body>
+		<div style="display: flex; justify-content: space-between; align-items: stretch; height: 100%; ">
+		   
+			<div class="gauche">
+				<div class="bonus_container">
+					<div class="ligne">
+						<a><button class="b_connnexion">L'espion</button></a>
+						<a><button class="b_connnexion">Sabotage</button></a>
+					</div>
+
+					<div class="ligne">
+						<a><button class="b_connnexion">Yeux de faucon</button></a>
+						<a><button class="b_connnexion">Barils</button></a>
+					</div>
+				</div> 
+				
+				<div class="shoot_container">
+					<div class="ligne">
+						<a href="/req_afficher_tir"><button class="b_connnexion">Tirer</button></a>
+					</div>
+				</div>
+
+				<div class="deplacement_container">
+					<div class="ligne_1">
+						<a><button class="b_connnexion">Avant</button></a>
+					</div>
+					
+					<div class="ligne_2">
+						<a><button class="b_connnexion">Droite</button></a>
+						<a><button class="b_connnexion">Gauche</button></a>
+					</div>
+
+					<div class="ligne_3">
+						<a><button class="b_connnexion">Arrière</button></a>
+					</div>
+					
+				</div>
+			</div>
+		
+			<div class="centre">
+				{carteAff}
+			</div>
+
+			<div class="droite">
+				<div class="ligne">
+					<a><button class="b_connnexion">Kraken</button></a>
+				</div>
+				<div class="tour">
+					<a href="/req_tour_suivant?nom_partie={partie_query}&player={player}"><button class="b_connnexion">Tour suivant</button></a>
+				</div>
+				<div class="pv">
+					<label class="ptsvie">Point de vie : <br> </label>
+					<label class="ptsvie">Point de vie 2: </label>
+				</div>
+				
+			</div>
+	   </div>
+</body>
+</html	

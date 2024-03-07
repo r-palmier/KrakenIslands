@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Carte</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="style.css">
+		<style>
+			.bl { background-color: blue; width: {nbpx}px; height: {nbpx}px; border: 1px dashed #000000e0; }
+			.ye { background-color: yellow; width: {nbpx}px; height: {nbpx}px; border: 1px dashed #000000e0; }
+			.gr { background-color: green; width: {nbpx}px; height: {nbpx}px; border: 1px dashed #000000e0; }
+			.br { background-color: brown; width: {nbpx}px; height: {nbpx}px; border: 1px dashed #000000e0; }
+		</style>
+	</head>
+	<body>
+
+		 <div style="display: flex; justify-content: space-between; align-items: stretch; height: 100%; ">
+
+            <div class="gauche">
+                <div class="bonus_container">
+                    <div class="ligne">
+                        <a><button class="b_connnexion">L'espion</button></a>
+                        <a><button class="b_connnexion">Sabotage</button></a>
+                    </div>
+
+                    <div class="ligne">
+                        <a><button class="b_connnexion">Yeux de faucon</button></a>
+                        <a><button class="b_connnexion">Barils</button></a>
+                    </div>
+                </div>
+
+                <div class="shoot_container">
+                    <div class="ligne">
+                        <a><button class="b_connnexion">Tirer</button></a>
+                    </div>
+                </div>
+
+                <div class="deplacement_container">
+                    <div class="ligne_1">
+                        <a href="req_deplacement?direction=haut"><button class="b_connnexion">Haut</button></a>
+                    </div>
+
+                    <div class="ligne_2">
+                        <a href="req_deplacement?direction=gauche"><button class="b_connnexion">Gauche</button></a>
+						
+                        <a href="req_deplacement?direction=droite"><button class="b_connnexion">Droite</button></a>
+                    </div>
+
+                    <div class="ligne_3">
+                       <a href="req_deplacement?direction=bas"><button class="b_connnexion">Bas</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="centre">
+               {carteAff}
+            </div>
+
+            <div class="droite">
+                <div class="ligne">
+                    <a><button disabled class="b_connnexion">Kraken</button></a>
+                </div>
+                <div class="tour">
+                   <a href="/req_tour_suivant2"><button class="b_connnexion">Tour suivant</button></a>
+                </div>
+                <div class="pv">
+                    <label class="ptsvie">Point de vie : <br> </label>
+                    <label class="ptsvie">Point de vie 2: </label>
+                </div>
+
+            </div>
+       </div>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tir</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form style="margin: 50px">
+		<div class="container">
+			<span class="bl" style="height: 20px; width: 20px;"></span>
+			
+			<input id="toggle" type="checkbox" name="z-tir" class="z-tir">
+			<label for="toggle" class="l-tir"></label>
+			
+			<input id="toggle1" type="checkbox" name="z-tir" class="z-tir">
+			<label for="toggle1" class="l-tir"></label>
+			
+			<input id="toggle2" type="checkbox" name="z-tir" class="z-tir">
+			<label for="toggle2" class="l-tir"></label>
+			
+			<input id="toggle3" type="checkbox" name="z-tir" class="z-tir">
+			<label for="toggle3" class="l-tir"></label>
+
+			
+		</div>
+		<a><button>Tir</button></a>
+	</form>
+
+	<script>
+		let checkboxes;
+
+		window.addEventListener("load", function () {
+			checkboxes = document.querySelectorAll("form input[type=checkbox]");
+
+			for(let checkbox of checkboxes) {
+				checkbox.addEventListener("click", handleChecked);
+			}
+		});
+
+		function handleChecked(event) {
+			const count = countChecked(checkboxes);
+			
+			if (count >= 3) {
+				for (let checkbox of checkboxes) {
+					if (checkbox.checked === false) {
+						checkbox.setAttribute("disabled", true);
+					}
+				}
+			} else {
+				for (let checkbox of checkboxes) {
+					checkbox.removeAttribute("disabled");
+				}
+			}
+		}
+
+		function countChecked(checkboxes) {
+			return Array.from(checkboxes.values()).reduce((acc, box) => acc + (box.checked ? 1 : 0), 0);
+		}
+	</script>
+</body>
+</html>

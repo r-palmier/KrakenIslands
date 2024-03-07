@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jeu</title>
+	<link rel="stylesheet" href="style.css">
+	<meta http-equiv="refresh" content="3; url=/req_actualiser_jeu?nom_partie={partie_query}">
+</head>
+<body>
+	<div class="full-height-flex"> 
+		<div class="gauche">
+			<div class="bonus_container">
+                <label class="bonus_ligne">
+                    <a href="/req_bonus?bonus=espion&nom_partie={partie_query}"><button disabled class="b_bonus" id="espion">L'espion</button></a>
+                    x{nb_espion}
+                </label>
+
+                <label class="bonus_ligne">
+                    <a href="/req_bonus?bonus=sabotage&nom_partie={partie_query}"><button disabled class="b_bonus" id="sabotage">Sabotage</button></a>
+                    x{nb_sabot}
+                </label>
+
+                <label class="bonus_ligne">
+                    <a href="/req_bonus?bonus=faucon&nom_partie={partie_query}"><button disabled class="b_bonus" id="faucon">Yeux de faucon</button></a>
+                    x{nb_yeux}
+                </label>
+
+                <label class="bonus_ligne">
+                    <a href="/req_bonus?bonus=barils&nom_partie={partie_query}"><button disabled class="b_bonus" id="barils">Barils</button></a>
+                    x{nb_barils}
+                </label>
+            </div>
+
+			<div class="shoot_container">
+                <div class="ligne">
+                    <a href="/req_afficher_tir?nom_partie={partie_query}"><button disabled class="b_connnexion">Tirer</button></a>
+                </div>
+            </div>
+
+            <div class="deplacement_container">
+                <div class="ligne_depl">
+                    <a href="/req_deplacement?direction=haut&nom_partie={partie_query}"><button {disabled class="mv_haut"></button></a>
+                </div>
+
+                <div class="ligne_depl" id="ligne_centre">
+                    <a href="/req_deplacement?direction=gauche&nom_partie={partie_query}"><button disabled class="mv_gauche"></button></a>
+                    <a href="/req_deplacement?direction=droite&nom_partie={partie_query}"><button disabled class="mv_droite"></button></a>
+                </div>
+
+                <div class="ligne_depl">
+                    <a href="/req_deplacement?direction=bas&nom_partie={partie_query}"><button disabled class="mv_bas"></button></a>
+                </div>
+            </div>
+		</div>
+	
+		<div class="centre">
+			<div class="carte_bg">
+                    {carteAff}
+            </div>
+		</div>
+
+		<div class="droite">
+			<div class="bonus_container">
+                <label class="bonus_ligne">
+                    <a href="/req_bonus?bonus=kraken&nom_partie={partie_query}"><button disabled class="b_bonus" id="kraken">Kraken</button></a>
+                    x{nb_kraken}
+                </label>
+            </div>
+
+            <div class="tour_container">
+                <label class="t_suivant">
+                    <a href="/req_tour_suivant?nom_partie={partie_query}"><button disabled {c_tour} class="b_t_suivant"></button></a>
+                    Tour Suivant
+                </label>
+            </div>
+
+			<div class="pv">
+				<div class="pv_container">
+                    <label class="pv_chiffres" id="vous">
+                         
+                        {pvJ1}
+                    </label>
+                    <label class="pv_barre">
+                        <span class="pv_barre_bg">
+                            <span id="barreJ1" style="width: {pvJ1_p}%;"></span>
+                        </span>
+                        {pseudoJ1}
+                    </label>
+                </div>
+                <div class="pv_container">
+                    <label class="pv_chiffres" id="adv">
+                        {pvJ2}
+                    </label>
+                    <label class="pv_barre">
+                        <span class="pv_barre_bg">
+                            <span id="barreJ1" style="width: {pvJ2_p}%;"></span>
+                        </span>
+                        {pseudoJ2}
+                    </label>
+                </div>			
+			</div>
+		</div>
+   </div>
+</body>
+</html	

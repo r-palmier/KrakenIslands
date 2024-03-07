@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choix du bateau</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2><label>Choisissez votre bateau</label></h2>
+    </header>
+
+    <form method="get" action="/req_choix_bateau" class="form_choix">
+        <div class="bateaux">
+            <div class="cadre_bateau">
+                <label class="label_bateau">
+                    <div class="center_bateau">
+                        <input type="radio" name="choixbateau" value="schooner" class="radio_bateau" required>
+                        <span class="schooner"></span>
+                        <span class="nom_bateau">Schooner</span>
+                    </div>
+                    <div class="stats">
+						{schooner}
+                    </div>
+                </label>  
+            </div>
+    
+            <div class="cadre_bateau">
+                <label class="label_bateau">
+                    <div class="center_bateau">
+                        <input type="radio" name="choixbateau" value="brick" class="radio_bateau" required>
+                        <span class="brick"></span>
+                        <span class="nom_bateau">Brick</span>
+                    </div>
+                    <div class="stats">
+						{brick}
+                    </div>
+                </label>
+            </div>
+    
+            <div class="cadre_bateau">
+                <label class="label_bateau">
+                    <div class="center_bateau">
+                        <input type="radio" name="choixbateau" value="fregate" class="radio_bateau"required>
+                        <span class="fregate"></span>
+                        <span class="nom_bateau">Frégate</span>
+                    </div>
+                    <div class="stats">
+                    	{fregate}
+					</div>
+                </label> 
+            </div>
+    
+            <div class="cadre_bateau">
+                <label class="label_bateau">
+                    <div class="center_bateau">
+                        <input type="radio" name="choixbateau" value="galion" class="radio_bateau"required>
+                        <span class="galion"></span>
+                        <span class="nom_bateau">Galion</span>
+                    </div>
+                    <div class="stats">
+                    	{galion}
+					</div>
+                </label>                
+            </div>
+        </div>
+
+       	<input type="hidden" name="nom_partie" value="{partie_query}">
+
+        <div class="cadre_pret">
+            <input type="submit" value="Prêt" class="b_accueil_int">
+        </div>
+    </form>
+    
+</body>
+</html>
